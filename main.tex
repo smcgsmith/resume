@@ -1,0 +1,267 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage[
+  backend=biber,
+  sorting=ydnt,        % year-descending, name, title
+  giveninits=true,     % abbreviate first names
+  maxbibnames=3,   % show up to 3 authors
+  minbibnames=1,   % then collapse to "et al."
+  doi=false,
+  isbn=false,
+  url=false,
+  eprint=false
+]{biblatex}
+\AtBeginBibliography{\small}
+
+\addbibresource{pub.bib}
+
+% No numbering, no label width, tight spacing
+\setlength\bibitemsep{0.3\baselineskip}
+\setlength\bibhang{0pt}
+\setlength\biblabelsep{0pt}
+
+\defbibenvironment{bibliography}
+  {\list{}
+     {\leftmargin=0pt
+      \itemindent=0pt
+      \itemsep=0.3\baselineskip
+      \parsep=0pt}}
+  {\endlist}
+  {\item}
+
+\newcommand{\myfamilyname}{Smith}
+\newcommand{\mygivenname}{Samuel}
+
+\DeclareNameAlias{author}{family-given}
+
+\DeclareFieldFormat[article]{title}{\mkbibemph{#1}}
+\DeclareFieldFormat{journaltitle}{#1}
+\renewcommand{\newunitpunct}{\addcomma\space}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\usepackage{fontawesome5}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%
+
+\begin{document}
+
+% %----------HEADING----------
+% \begin{center}
+%     \textbf{\Huge \scshape Samuel M. Smith} \\ \vspace{1pt}
+%     Bozeman, MT \\
+
+%     \href{mailto:smcgsmith@gmail.com}{smcgsmith@gmail.com} $|$
+%     (931) 636--8167 $|$
+%     \href{https://github.com/smcgsmith}{\faGithub\ github.com/smcgsmith} $|$
+%     \href{https://scholar.google.com/citations?user=qW4CBTkAAAAJ&hl=en}{\faGraduationCap\ Google Scholar}
+% \end{center}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Samuel M. Smith}
+\end{center}
+
+\vspace{-42pt}
+
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
+Bozeman, MT & \href{mailto:smcgsmith@gmail.com}{smcgsmith@gmail.com} \\
+(931) 636--8167 & \href{https://github.com/smcgsmith}{\faGithub\ github.com/smcgsmith} \\
+ & \href{https://scholar.google.com/citations?user=qW4CBTkAAAAJ&hl=en}{\faGraduationCap\ Google Scholar}
+\end{tabular*}
+
+
+% \begin{center}
+%     \textbf{\Huge \scshape Samuel M. Smith} \\ \vspace{1pt}
+%     Bozeman, MT \\
+%     \href{mailto:smcgsmith@gmail.com}{smcgsmith@gmail.com} $|$
+%     (931) 636--8167 $|$
+%     \href{https://github.com/smcgsmith}{github.com/smcgsmith} $|$
+%     \href{https://scholar.google.com/citations?user=qW4CBTkAAAAJ&hl=en}{google scholar}
+% \end{center}
+\vspace{-10pt}
+%-----------SUMMARY-----------
+% \section{Summary}
+% Applied data scientist, scientific software developer, and data engineer with specialized experience using statistical and simulations models to support decision-making. Skilled at designing models and analyses that recover meaningful patterns from sparse and imperfect data. Motivated to apply quantitative methods to real-world problems where data-driven decisions matter.
+% \vspace{-10pt}
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label = {}, itemsep=0pt, topsep=2pt]
+  \small{
+    \item{
+      \textbf{Statistical Modeling:} Bayesian \& Frequentist inference, generalized \& linear regression, hierarchical/multilevel models, sensitivity analysis, multivariate analysis
+    }
+    \item{
+      \textbf{Programming:} R, C++, Stan, Python, Bash
+    }
+    
+    \item{
+      \textbf{Systems \& Infrastructure:} Git, VS Code, Linux (remote machines), HPC (SLURM), SSH, \LaTeX
+    }
+  }
+\end{itemize}
+\vspace{-17pt}
+
+%-----------EXPERIENCE-----------
+\section{Relevant Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {ORISE Research Fellow — USDA APHIS}{Jun. 2024 -- Present}
+  {Statistical Modeling, Data Analysis, \& Scientific Software Development}{Remote, US}
+\resumeItemListStart
+    \resumeItem{Conceived and implemented an end-to-end analysis that leveraged hierarchical Bayesian modeling, stochastic simulation, and optimization to improve disease surveillance protocols.}
+    \resumeItem{Estimated power-law kernel function parameters using custom MCMC samplers, likelihood functions, and sensitive survey data.}
+    \resumeItem{Engineered reproducible HPC pipelines in Bash and R to run and process millions of simulations.}
+    \resumeItem{Developed a Python algorithm to optimize sampling targets using both empirical and estimated parameters.}
+    \resumeItem{Translated technical results for non-technical stakeholders to iteratively improve the modeling framework.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Research Associate II — Colorado State University}{Oct. 2023 -- Jun. 2024}
+  {Statistical Modeling \& Simulation Development}{Fort Collins, CO}
+\resumeItemListStart
+    \resumeItem{Conceived of a system of ordinary differential equations and fit them to messy survey data within a Bayesian framework using Stan and R in order to infer latent processes.}
+    \resumeItem{Performed sensitivity analyses to attribute uncertainty to specific model parameters (estimate effect sizes) and inform where data collection and parameter estimation should be improved.}
+    \resumeItem{Built reproducible HPC workflows using Bash and R to orchestrate large-scale simulation and analysis pipelines.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Graduate Research Assistant -- Colorado State University}{Aug. 2021 -- Aug. 2023}
+  {Simulation Development, Data Engineering \& Analysis}{Fort Collins, CO}
+\resumeItemListStart
+    \resumeItem{Engineered new features in a large C++ simulation to evaluate counterfactual management strategies and support decision making during future disease outbreaks.}
+    \resumeItem{Built R-based data pipelines to process large simulation outputs, generate standardized figures, and run sensitivity analyses quantifying how parameter uncertainty impacts model outcomes.}
+    \resumeItem{Maintained a reproducible and version-controlled codebase with Git for multi-institution, international collaboration.}
+    \resumeItem{Generated quarterly reports and presented biweekly updates to funding institutions.}
+    
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Colorado State University}{Aug. 2021 -- Aug. 2023}
+    {M.S. Ecology (Applied Statistics Focus)}{Fort Collins, CO}
+  \resumeSubheading
+    {Lewis \& Clark College}{Aug. 2017 -- May 2021}
+    {B.A. Biology, Honors (Significant International Affairs Coursework)}{Portland, OR}
+\resumeSubHeadingListEnd
+\vspace{-10pt}
+
+\section{Selected Publications \& Presentations}
+\footnotesize
+\nocite{smith2025potential}
+\nocite{smith2025united}
+\nocite{simony2025stochastic}
+\nocite{Smith2024CEAH}
+\nocite{Smith2024USAMM}
+\nocite{Smith2023EEDIDecision}
+%\nocite{smithimpact}
+%\nocite{metz2023functional}
+
+\printbibliography[heading=none]
+
+\end{document}
