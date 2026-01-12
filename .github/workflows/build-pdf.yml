@@ -1,0 +1,32 @@
+name: Build PDF
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          args: -pdf -interaction=nonstopmode -file-line-error
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: main.pdf
+
+      - name: Commit PDF
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: main.pdf
+          message: Update PDF
+          default_author: github_actions
